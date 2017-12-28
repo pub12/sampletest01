@@ -6,5 +6,15 @@ pipeline {
 				sh 'docker version'
 			}
 		}
+
+		stage ('sanity check'){
+			steps{
+				input "move to prod?"
+			}
+		}
+
+		stage ('prod'){
+			sh 'python --version'
+		}
 	}
 }
