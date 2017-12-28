@@ -14,7 +14,9 @@ pipeline {
 		}
 
 		stage ('prod'){
-			sh 'python --version'
+			steps{
+				sh 'python --version'
+			}
 		}
 	}
 }
